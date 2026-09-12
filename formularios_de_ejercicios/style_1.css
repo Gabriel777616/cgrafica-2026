@@ -1,0 +1,267 @@
+/* ========================================================= */
+/* VARIABLES Y CONFIGURACIÓN GENERAL                         */
+/* ========================================================= */
+
+:root {
+    --color-principal: #2563eb;
+    --color-principal-hover: #1d4ed8;
+
+    --color-texto: #1e293b;
+    --color-texto-secundario: #64748b;
+
+    --color-fondo: #f1f5f9;
+    --color-superficie: #ffffff;
+
+    --color-borde: #cbd5e1;
+    --color-foco: #93c5fd;
+
+    --radio: 10px;
+    --sombra: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+
+/* ========================================================= */
+/* CONFIGURACIÓN BASE                                        */
+/* ========================================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 24px;
+
+    background-color: var(--color-fondo);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    color: var(--color-texto);
+}
+
+
+/* ========================================================= */
+/* CONTENIDO PRINCIPAL                                       */
+/* ========================================================= */
+
+main {
+    width: 100%;
+    max-width: 480px;
+}
+
+
+/* ========================================================= */
+/* CONTENEDOR DEL FORMULARIO                                 */
+/* ========================================================= */
+
+.formulario {
+    padding: 40px;
+
+    background-color: var(--color-superficie);
+
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio);
+
+    box-shadow: var(--sombra);
+}
+
+
+/* ========================================================= */
+/* ENCABEZADO                                                 */
+/* ========================================================= */
+
+.formulario__header {
+    margin-bottom: 32px;
+
+    text-align: center;
+}
+
+
+.formulario__header h1 {
+    margin-bottom: 8px;
+
+    font-size: 28px;
+    font-weight: 700;
+}
+
+
+.formulario__header p {
+    color: var(--color-texto-secundario);
+
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+
+/* ========================================================= */
+/* CAMPOS DEL FORMULARIO                                     */
+/* ========================================================= */
+
+.campo {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+
+    margin-bottom: 20px;
+}
+
+
+.campo label {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+.campo input {
+    width: 100%;
+
+    padding: 12px 14px;
+
+    border: 1px solid var(--color-borde);
+    border-radius: 8px;
+
+    background-color: var(--color-superficie);
+
+    color: var(--color-texto);
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.campo input::placeholder {
+    color: var(--color-texto-secundario);
+}
+
+
+/* Estado visual cuando el usuario selecciona un campo */
+.campo input:focus {
+    border-color: var(--color-principal);
+
+    box-shadow:
+        0 0 0 3px var(--color-foco);
+}
+
+
+/* ========================================================= */
+/* TÉRMINOS Y CONDICIONES                                    */
+/* ========================================================= */
+
+.terminos {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 10px;
+
+    margin: 8px 0 24px;
+}
+
+
+.terminos input {
+    width: 16px;
+    height: 16px;
+
+    margin-top: 2px;
+
+    accent-color: var(--color-principal);
+}
+
+
+.terminos label {
+    color: var(--color-texto-secundario);
+
+    font-size: 14px;
+    line-height: 1.4;
+
+    cursor: pointer;
+}
+
+
+/* ========================================================= */
+/* BOTÓN PRINCIPAL                                           */
+/* ========================================================= */
+
+button {
+    width: 100%;
+
+    padding: 13px 16px;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: var(--color-principal);
+
+    color: #ffffff;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+/* Estado visual al pasar el cursor */
+button:hover {
+    background-color: var(--color-principal-hover);
+
+    transform: translateY(-1px);
+}
+
+
+/* Estado visual al seleccionar el botón con teclado */
+button:focus-visible {
+    outline: 3px solid var(--color-foco);
+    outline-offset: 2px;
+}
+
+
+/* ========================================================= */
+/* DISEÑO PARA PANTALLAS PEQUEÑAS                            */
+/* ========================================================= */
+
+@media (max-width: 520px) {
+
+    .formulario {
+        padding: 28px 22px;
+    }
+
+
+    .formulario__header h1 {
+        font-size: 24px;
+    }
+
+}
+
+/* ========================================================= */
+/* PIE DE PÁGINA                                             */
+/* ========================================================= */
+
+.pie-pagina {
+    position: static;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px 0;
+}

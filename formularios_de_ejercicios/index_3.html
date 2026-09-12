@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Configuración general del documento -->
+    <meta charset="UTF-8">
+
+    <!-- Configuración para diseño responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Hoja de estilos principal -->
+    <link rel="stylesheet" href="style_3.css">
+
+    <!-- Información del documento -->
+    <title>Encuesta de satisfacción</title>
+</head>
+
+<body>
+
+    <!-- Contenido principal de la página -->
+    <main>
+
+        <!-- Contenedor de la encuesta -->
+        <section class="encuesta">
+
+            <!-- Encabezado de la encuesta -->
+            <header class="encuesta__header">
+                <h1>Encuesta de satisfacción</h1>
+
+                <p>
+                    Tu opinión nos ayuda a mejorar nuestros servicios.
+                </p>
+            </header>
+
+
+            <!-- Formulario de encuesta -->
+            <form>
+
+                <!-- Selección de una opción -->
+                <fieldset class="grupo">
+
+                    <legend>
+                        ¿Cómo calificarías tu experiencia?
+                    </legend>
+
+                    <div class="opciones">
+                        <label>
+                            <input type="radio" name="experiencia" value="excelente" required checked>
+                            Excelente
+                        </label>
+
+                        <label>
+                            <input type="radio" name="experiencia" value="buena">
+                            Buena
+                        </label>
+
+                        <label>
+                            <input type="radio" name="experiencia" value="regular">
+                            Regular
+                        </label>
+
+                        <label>
+                            <input type="radio" name="experiencia" value="mala">
+                            Mala
+                        </label>
+                    </div>
+
+                </fieldset>
+
+
+                <!-- Selección de múltiples opciones -->
+                <fieldset class="grupo">
+
+                    <legend>
+                        ¿Qué aspectos te resultaron útiles?
+                    </legend>
+
+                    <div class="opciones">
+                        <label>
+                            <input type="checkbox" name="aspectos" value="atencion">
+                            Atención
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="aspectos" value="calidad">
+                            Calidad
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="aspectos" value="rapidez">
+                            Rapidez
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="aspectos" value="precio">
+                            Precio
+                        </label>
+                    </div>
+
+                </fieldset>
+
+
+                <!-- Valoración mediante escala -->
+                <fieldset class="grupo">
+
+                    <legend>
+                        ¿Qué tan probable es que recomiendes nuestro servicio?
+                    </legend>
+
+                    <div class="range__contenedor">
+
+                        <span>0</span>
+
+                        <input type="range" id="recomendacion" name="recomendacion" min="0" max="10" value="5">
+
+                        <span>10</span>
+
+                    </div>
+
+                </fieldset>
+
+
+                <!-- Acción principal del formulario -->
+                <button type="submit">
+                    Enviar encuesta
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="pie-pagina">
+        © 2026 Gabriel Salazar - 224034025
+    </footer>
+
+</body>
+
+</html>

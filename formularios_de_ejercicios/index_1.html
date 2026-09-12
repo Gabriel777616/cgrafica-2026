@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Configuración general del documento -->
+    <meta charset="UTF-8">
+
+    <!-- Configuración para diseño responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Hoja de estilos principal -->
+    <link rel="stylesheet" href="style_1.css">
+
+    <!-- Información del documento -->
+    <title>Formulario de registro</title>
+</head>
+
+<body>
+
+    <!-- Contenido principal de la página -->
+    <main>
+
+        <!-- Contenedor del formulario -->
+        <section class="formulario">
+
+            <!-- Encabezado del formulario -->
+            <header class="formulario__header">
+                <h1>Crear una cuenta</h1>
+
+                <p>
+                    Completa los siguientes datos para registrarte.
+                </p>
+            </header>
+
+
+            <!-- Formulario de registro -->
+            <form>
+
+                <!-- Datos personales -->
+                <div class="campo">
+                    <label for="nombre">Nombre</label>
+
+                    <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>
+                </div>
+
+
+                <!-- Información de contacto -->
+                <div class="campo">
+                    <label for="correo">Correo electrónico</label>
+
+                    <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
+                </div>
+
+
+                <!-- Datos de acceso -->
+                <div class="campo">
+                    <label for="password">Contraseña</label>
+
+                    <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña" required>
+                </div>
+
+
+                <div class="campo">
+                    <label for="confirmacion">Confirmar contraseña</label>
+
+                    <input type="password" id="confirmacion" name="confirmacion" placeholder="Repite tu contraseña"
+                        required>
+                </div>
+
+
+                <!-- Confirmación de términos y condiciones -->
+                <div class="terminos">
+                    <input type="checkbox" id="terminos" name="terminos" required>
+
+                    <label for="terminos">
+                        Acepto los términos y condiciones
+                    </label>
+                </div>
+
+
+                <!-- Acción principal del formulario -->
+                <button type="submit">
+                    Registrarse
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="pie-pagina">
+        © 2026 Gabriel Salazar - 224034025
+    </footer>
+</body>
+
+</html>

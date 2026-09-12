@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Formulario de soporte</title>
+
+    <link rel="stylesheet" href="style_4.css">
+</head>
+
+<body>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+
+        <!-- CONTENEDOR DEL FORMULARIO -->
+        <section class="soporte">
+
+            <!-- ENCABEZADO -->
+            <header class="soporte__header">
+                <h1>Formulario de soporte</h1>
+
+                <p>
+                    Describe tu problema y nuestro equipo
+                    se encargará de ayudarte.
+                </p>
+            </header>
+
+            <!-- FORMULARIO -->
+            <form class="formulario-soporte">
+
+                <!-- CAMPO DE PRIORIDAD -->
+                <div class="campo">
+                    <label for="prioridad">
+                        Prioridad
+                    </label>
+
+                    <select id="prioridad" name="prioridad" required>
+                        <option value="">
+                            Selecciona una prioridad
+                        </option>
+
+                        <option value="baja">
+                            Baja
+                        </option>
+
+                        <option value="media">
+                            Media
+                        </option>
+
+                        <option value="alta">
+                            Alta
+                        </option>
+
+                        <option value="urgente">
+                            Urgente
+                        </option>
+                    </select>
+                </div>
+
+                <!-- CAMPO DE DESCRIPCIÓN -->
+                <div class="campo">
+                    <label for="problema">
+                        Describe el problema
+                    </label>
+
+                    <textarea id="problema" name="problema" rows="6" placeholder="Explica detalladamente el problema..."
+                        required></textarea>
+                </div>
+
+                <!-- CAMPO DE ARCHIVO -->
+                <div class="campo">
+                    <label for="archivo">
+                        Adjuntar archivo
+                    </label>
+
+                    <input type="file" id="archivo" name="archivo">
+                </div>
+
+                <!-- BOTÓN DE ENVÍO -->
+                <button type="submit">
+                    Enviar solicitud
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="pie-pagina">
+        © 2026 Gabriel Salazar - 224034025
+    </footer>
+
+</body>
+
+</html>

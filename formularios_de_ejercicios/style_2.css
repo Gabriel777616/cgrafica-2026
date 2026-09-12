@@ -1,0 +1,256 @@
+/* ========================================================= */
+/* VARIABLES Y PALETA DE COLORES                             */
+/* ========================================================= */
+
+:root {
+    --color-principal: #c2410c;
+    --color-principal-hover: #9a3412;
+
+    --color-texto: #292524;
+    --color-texto-secundario: #78716c;
+
+    --color-fondo: #faf7f2;
+    --color-superficie: #ffffff;
+
+    --color-borde: #d6d3d1;
+    --color-foco: #fed7aa;
+
+    --radio: 12px;
+    --sombra: 0 12px 35px rgba(68, 64, 60, 0.10);
+}
+
+
+/* ========================================================= */
+/* CONFIGURACIÓN BASE                                        */
+/* ========================================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 24px;
+
+    background-color: var(--color-fondo);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    color: var(--color-texto);
+}
+
+
+/* ========================================================= */
+/* CONTENIDO PRINCIPAL                                       */
+/* ========================================================= */
+
+main {
+    width: 100%;
+    max-width: 480px;
+}
+
+
+/* ========================================================= */
+/* CONTENEDOR DE LA RESERVA                                  */
+/* ========================================================= */
+
+.reserva {
+    padding: 40px;
+
+    background-color: var(--color-superficie);
+
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio);
+
+    box-shadow: var(--sombra);
+}
+
+
+/* ========================================================= */
+/* ENCABEZADO                                                 */
+/* ========================================================= */
+
+.reserva__header {
+    margin-bottom: 32px;
+
+    text-align: center;
+}
+
+
+.reserva__header h1 {
+    margin-bottom: 8px;
+
+    color: var(--color-texto);
+
+    font-size: 28px;
+    font-weight: 700;
+}
+
+
+.reserva__header p {
+    color: var(--color-texto-secundario);
+
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+
+/* ========================================================= */
+/* CAMPOS DEL FORMULARIO                                     */
+/* ========================================================= */
+
+.campo {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+
+    margin-bottom: 20px;
+}
+
+
+.campo label {
+    color: var(--color-texto);
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+.campo input,
+.campo textarea {
+    width: 100%;
+
+    padding: 12px 14px;
+
+    border: 1px solid var(--color-borde);
+    border-radius: 8px;
+
+    background-color: var(--color-superficie);
+
+    color: var(--color-texto);
+
+    font-family: inherit;
+    font-size: 15px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* Texto de referencia de los campos */
+.campo input::placeholder,
+.campo textarea::placeholder {
+    color: var(--color-texto-secundario);
+}
+
+
+/* Estado visual de los campos seleccionados */
+.campo input:focus,
+.campo textarea:focus {
+    border-color: var(--color-principal);
+
+    box-shadow:
+        0 0 0 3px var(--color-foco);
+}
+
+
+/* Configuración específica del área de comentarios */
+.campo textarea {
+    min-height: 120px;
+
+    resize: vertical;
+}
+
+
+/* ========================================================= */
+/* BOTÓN PRINCIPAL                                           */
+/* ========================================================= */
+
+button {
+    width: 100%;
+
+    padding: 13px 16px;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: var(--color-principal);
+
+    color: #ffffff;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+/* Estado visual al pasar el cursor */
+button:hover {
+    background-color: var(--color-principal-hover);
+
+    transform: translateY(-1px);
+}
+
+
+/* Estado visual al seleccionar el botón con teclado */
+button:focus-visible {
+    outline: 3px solid var(--color-foco);
+    outline-offset: 2px;
+}
+
+
+/* ========================================================= */
+/* DISEÑO PARA PANTALLAS PEQUEÑAS                            */
+/* ========================================================= */
+
+@media (max-width: 520px) {
+
+    .reserva {
+        padding: 28px 22px;
+    }
+
+
+    .reserva__header h1 {
+        font-size: 24px;
+    }
+
+}
+
+/* ========================================================= */
+/* PIE DE PÁGINA                                             */
+/* ========================================================= */
+
+.pie-pagina {
+    width: 100%;
+    max-width: 480px;
+
+    margin-top: 30px;
+    padding: 20px 0;
+
+    text-align: center;
+
+    color: var(--color-texto-secundario);
+
+    font-size: 13px;
+}
